@@ -1,0 +1,13 @@
+/**
+ * events shared block styling
+ *
+ * This file gets shared between the
+ * theme and editor.
+ */
+
+.events {
+	& b::after {
+		/* replace this demo code with your own: */
+		content: " (❒ style.css) ";
+	}
+}
