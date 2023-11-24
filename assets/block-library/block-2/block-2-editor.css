@@ -1,21 +1,16 @@
 /**
- * events editor styling
+ * block-2 editor styling
  *
  * This file is for CSS admin overrides only.
  * Use style.css for shared theme/editor block styling.
  */
 @import "./*style.css";
 
-[data-type="aquamin/events"] {
+[data-type="aquamin/block-2"] {
 	& .is-selected {
 		& b::after {
 			/* replace this demo code with your own: */
 			content: " (✎ editor.css) ";
 		}
 	}
-	
 }
-
-[data-type="aquamin/events"] h2 {
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	}

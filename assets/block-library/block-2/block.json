@@ -1,0 +1,24 @@
+{
+	"apiVersion": 3,
+	"title": "block-2",
+	"description": "block-2 block",
+	"text-domain": "aquamin",
+	"name": "aquamin/block-2",
+	"icon": "feedback",
+	"category": "aquamin-blocks",
+	"example": {},
+	"attributes": {
+		"demoText": {
+			"type": "string",
+			"default": "(remove this demo attribute)"
+		}
+	},
+	"supports": {
+		"customClassName": true,
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"]
+		}
+	}
+}
