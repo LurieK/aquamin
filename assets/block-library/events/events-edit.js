@@ -16,12 +16,9 @@ const ServerSideRender = wp.serverSideRender;
 const eventsBlockEdit = ({ attributes }) => {
 	return (
 	<>
-		<h2>This is a H2</h2>
-		<ServerSideRender
-			block="aquamin/events"
-			attributes={attributes}
-		/>
-		
+		<h2>This is a H2 in edit.js</h2>
+			<ServerSideRender block="aquamin/events" attributes={attributes} />
+		<input></input>
 	</>
 	);
 };

@@ -19,7 +19,7 @@ const eventsBlockSave = () => {
 	return <>
 	<InnerBlocks.Content />
 
-	<h2>This is some h2</h2>
+	<h2>This is some h2 in save.js</h2>
 	
 	</>;
 };
