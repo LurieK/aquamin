@@ -1,0 +1,28 @@
+{
+	"apiVersion": 3,
+	"title": "hero",
+	"description": "this is the hero for the top of the page",
+	"text-domain": "aquamin",
+	"name": "aquamin/hero",
+	"icon": "feedback",
+	"category": "aquamin-blocks",
+	"example": {},
+	"attributes": {
+		"aquaminClassNameAni": {
+			"type": "array",
+			"default": []
+		},
+		"aquaminClassNameHide": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"supports": {
+		"customClassName": true,
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"]
+		}
+	}
+}
