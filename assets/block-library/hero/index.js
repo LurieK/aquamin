@@ -6,6 +6,11 @@
  */
 
 /**
+ * Register inner blocks
+ */
+import './hero-item';
+
+/**
  * Import dependencies
  */
 import Icon from './icon.inline.svg';
@@ -21,7 +26,7 @@ const { registerBlockType } = wp.blocks;
  */
 registerBlockType(block.name, {
 	title: __('hero', 'aquamin'),
-	description: __('this is the hero for the top of the page', 'aquamin'),
+	description: __('This block holds the h1 and h3 for the site, as well as a background image', 'aquamin'),
 	icon: Icon,
 	edit,
 	save,

@@ -1,20 +1,16 @@
 {
 	"apiVersion": 3,
 	"title": "hero",
-	"description": "this is the hero for the top of the page",
+	"description": "This block holds the h1 and h3 for the site, as well as a background image",
 	"text-domain": "aquamin",
 	"name": "aquamin/hero",
 	"icon": "feedback",
 	"category": "aquamin-blocks",
 	"example": {},
 	"attributes": {
-		"aquaminClassNameAni": {
-			"type": "array",
-			"default": []
-		},
-		"aquaminClassNameHide": {
-			"type": "array",
-			"default": []
+		"demoText": {
+			"type": "string",
+			"default": "(remove this demo attribute)"
 		}
 	},
 	"supports": {

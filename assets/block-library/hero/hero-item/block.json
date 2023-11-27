@@ -1,0 +1,18 @@
+{
+	"apiVersion": 3,
+	"title": "hero item",
+	"description": "this is a button, or additional text that may be needed",
+	"text-domain": "aquamin",
+	"name": "aquamin/hero-item",
+	"parent": ["aquamin/hero"],
+	"icon": "feedback",
+	"category": "aquamin-blocks",
+	"example": {},
+	"attributes": {
+		"demoText": {
+			"type": "string",
+			"default": "(remove this demo attribute)"
+		}
+	},
+	"supports": {}
+}

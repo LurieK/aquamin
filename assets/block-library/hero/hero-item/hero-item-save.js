@@ -1,5 +1,5 @@
 /**
- * block-2 save interface
+ * hero item save interface
  *
  * This defines how the block gets
  * saved into the database. If
@@ -8,7 +8,7 @@
  */
 
 /**
- * Import save dependencies
+ * Import dependencies
  */
 import classnames from 'classnames';
 
@@ -17,13 +17,13 @@ const { useBlockProps, useInnerBlocksProps, RichText } = wp.blockEditor;
 /**
  * Generate block HTML to save to the database
  */
-const bBlockSave = ({ attributes, className }) => {
+const heroitemSave = ({ attributes, className }) => {
 	// get the attributes we care about
 	const { demoText } = attributes;
 
 	// set props for the outermost block element
 	const blockProps = useBlockProps.save({
-		className: classnames('block-2', className),
+		className: classnames('hero__item', className),
 	});
 
 	// apply wrapper props to outermost block element so it can contain inner blocks
@@ -31,11 +31,12 @@ const bBlockSave = ({ attributes, className }) => {
 
 	// output the block's html
 	return (
-		<div {...innerBlocksProps}>
+		<div {...blockProps}>
 			{/* replace this demo code with your own: */}
-			<RichText.Content tagName="b" value={demoText} />
+			<RichText.Content tagName="i" value={demoText} />
 			{innerBlocksProps.children}
 		</div>
 	);
 };
-export default bBlockSave;
+
+export default heroitemSave;
