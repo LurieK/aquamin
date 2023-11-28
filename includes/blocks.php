@@ -123,7 +123,7 @@ if ( $blocks ) {
 /**
  * Add our own block category
  */
-add_filter( 'block_categories' , function( $categories ) {
+add_filter( 'block_categories_all' , function( $categories ) {
 	$categories[] = array( 'slug'  => 'aquamin-blocks', 'title' => __( 'Custom Blocks', 'aquamin' ) );
 	return $categories;
 } );
@@ -136,7 +136,7 @@ add_filter( 'block_categories' , function( $categories ) {
 add_action( 'after_setup_theme', function() {
 
 	// register aquamin block category
-	add_filter( 'block_categories', function( $categories, $post ) {
+	add_filter( 'block_categories_all', function( $categories, $post ) {
 		return array_merge(
 			$categories,
 			array(

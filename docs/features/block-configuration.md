@@ -104,7 +104,7 @@ import { ButtonX } from '../Buttons';
 // because that would cause two conflicting versions of the
 // wp object to exist. Instead, we need to destructure from the
 // existing wp object:
-const { MediaPlaceholder, InspectorControls } = wp.blockEditor;
+const { , InspectorControls } = wp.blockEditor;
 ```
 
 Many examples you'll see online just `import` everything, but I was unable to get Parcel to behave like Webpack and properly use the `wp` object without importing it twice (and therefore throwing all manner of errors). So, until I can find a viable workaround for Parcel, if you're following an example online that shows `import {  InspectorControls } from '@wordpress/block-editor'`, you'll simply change it to `const {  InspectorControls } = wp.blockEditor`.

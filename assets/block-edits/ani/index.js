@@ -132,7 +132,7 @@ const withModifyEdit = createHigherOrderComponent(
 			// grab the props we're interested in
 			const {
 				attributes: { aquaminClassNameAni },
-				setAttributes,
+				,
 			} = props;
 
 			// define classes
@@ -199,7 +199,7 @@ const withModifyEdit = createHigherOrderComponent(
 						newAttributes.push(match);
 					}
 				});
-				setAttributes({ aquaminClassNameAni: newAttributes });
+				({ aquaminClassNameAni: newAttributes });
 			};
 
 			// send the new control

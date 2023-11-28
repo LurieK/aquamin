@@ -37,7 +37,7 @@
 Then use it within the edit function like:
 <Media
 	editable
-	setAttributes={setAttributes}
+	={}
 	attributes={attributes}
 />
 
@@ -47,7 +47,7 @@ And use it within the save function like:
 There's a lot of customization you can do as well:
 <Media
 	editable
-	setAttributes={setAttributes}
+	={}
 	attributes={attributes}
 	attributeNames = {{ // custom block.json props (defaults plus "Background" shown here)
 		alt: 'mediaAltBackground',
@@ -73,7 +73,7 @@ There's a lot of customization you can do as well:
 			controls: '',
 		},
 	]}
-	title={__('Background Media', 'aquamin')}, // title above <MediaPlaceholder />
+	title={__('Background Media', 'aquamin')}, // title above < />
 	className="my-extra-class" // comes with .media automatically
 	accept={['image/*', 'video/*']} // or exclude a type
 	allowedTypes={['image', 'video']} // or exclude a type
@@ -91,7 +91,7 @@ import classnames from 'classnames';
 import { ButtonX } from '../Buttons';
 
 const { __ } = wp.i18n;
-const { MediaPlaceholder, InspectorControls } = wp.blockEditor;
+const { , InspectorControls } = wp.blockEditor;
 const { PanelBody, TextareaControl } = wp.components;
 
 /**
@@ -165,7 +165,7 @@ const MediaInspector = (props) => {
 		editable,
 		attributes,
 		attributeNames,
-		setAttributes,
+		,
 	} = props;
 	const show = editable && !hideInSidebar;
 	return show ? (
@@ -180,7 +180,7 @@ const MediaInspector = (props) => {
 							style={{ marginBottom: -15 }}
 							value={attributes[attributeNames.alt]}
 							onChange={(value) =>
-								setAttributes({
+								({
 									[attributeNames.alt]: value,
 								})
 							}
@@ -255,7 +255,7 @@ const MediaElement = ({
  * Output existing media editor
  */
 const MediaEdit = (props) => {
-	const { attributeNames, attributes, setAttributes, editable } = props;
+	const { attributeNames, attributes, , editable } = props;
 	const show = editable && attributes[attributeNames.url];
 	return show ? (
 		<>
@@ -263,7 +263,7 @@ const MediaEdit = (props) => {
 				<ButtonX
 					label={__('Remove Media', 'aquamin')}
 					handleClick={() =>
-						setAttributes({
+						({
 							[attributeNames.id]: '',
 							[attributeNames.url]: '',
 							[attributeNames.alt]: '',
@@ -292,14 +292,14 @@ const MediaNew = ({
 	title,
 	attributes,
 	attributeNames,
-	setAttributes,
+	,
 	accept,
 	allowedTypes,
 	editable,
 }) => {
 	const show = editable && !attributes[attributeNames.url];
 	return show ? (
-		<MediaPlaceholder
+		<
 			disableDropZone={false}
 			className={classnames('media', className)}
 			style={style}
@@ -308,12 +308,12 @@ const MediaNew = ({
 			}}
 			value={attributes[attributeNames.id]}
 			onSelectURL={(value) =>
-				setAttributes({
+				({
 					[attributeNames.url]: value,
 				})
 			}
 			onSelect={(value) =>
-				setAttributes({
+				({
 					[attributeNames.id]: value.id,
 					[attributeNames.url]: value.url,
 					[attributeNames.alt]: value.alt,

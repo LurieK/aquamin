@@ -75,7 +75,7 @@ const withModifyEdit = createHigherOrderComponent(
 			// grab the props we're interested in
 			const {
 				attributes: { aquaminClassNameHide },
-				setAttributes,
+				,
 			} = props;
 
 			// define classes
@@ -117,7 +117,7 @@ const withModifyEdit = createHigherOrderComponent(
 											} else {
 												newAttributes.splice(index, 1);
 											}
-											setAttributes({
+											({
 												aquaminClassNameHide:
 													newAttributes,
 											});

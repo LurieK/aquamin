@@ -8,10 +8,10 @@
 	"category": "aquamin-blocks",
 	"example": {},
 	"attributes": {
-		"demoText": {
-			"type": "string",
-			"default": "(remove this demo attribute)"
-		}
+    	"backgroundImage": {
+      		"type": "string",
+      		"default": ""
+    	}
 	},
 	"supports": {
 		"customClassName": true,

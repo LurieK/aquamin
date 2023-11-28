@@ -11,3 +11,10 @@
 		content: " (❒ style.css) ";
 	}
 }
+
+.hero {
+
+	background-repeat: none;
+	background-size: cover;
+	background-repeat: none;
+}

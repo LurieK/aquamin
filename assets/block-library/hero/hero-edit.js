@@ -27,14 +27,19 @@ const heroBlockEdit = ({ attributes, setAttributes, className }) => {
     setAttributes({ subtitle: newSubtitle });
   };
 
-  const onSelectImage = (media) => {
+const onSelectImage = (media) => {
+  if (media && media.url) {
     setAttributes({ backgroundImage: media.url });
-  };
+  } else {
+    console.error('Media object is undefined or media URL is missing');
+  }
+};
 
-  const blockProps = useBlockProps({
-    className: classnames("hero", className),
-    style: { backgroundImage: `url(${backgroundImage})` },
-  });
+const blockProps = useBlockProps({
+  className: classnames("hero", className),
+  style: backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {},
+});
+
 
       const ALLOWED_BLOCKS = ['core/button']; // Specify allowed blocks here
 

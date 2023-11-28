@@ -24,9 +24,11 @@ const heroBlockSave = ({ attributes, className }) => {
 
 	// set props for the outermost block element
 	const blockProps = useBlockProps.save({
-        className: classnames('hero', className),
-        style: { backgroundImage: `url(${backgroundImage})` },
-    });
+		className: classnames('hero', className),
+		style: backgroundImage
+			? { backgroundImage: `url(${backgroundImage})` }
+			: {},
+	});
 
 	// apply wrapper props to outermost block element so it can contain inner blocks
 
@@ -34,13 +36,17 @@ const heroBlockSave = ({ attributes, className }) => {
 	return (
 		 <div {...blockProps}>
             <div className='hero-text'>
-                <RichText.Content tagName="h1" className='slide-in-left' value={title} />
+				<RichText.Content
+					tagName="h1"
+					className="slide-in-left"
+					value={title}
+				/>
                 <RichText.Content tagName="h3" className='slide-in-right' value={subtitle} />
             </div>
 			<div className="hero-buttons">
                 <InnerBlocks.Content />
-            </div>
-        </div>
+			</div>
+		</div>
 	);
 };
 export default heroBlockSave;
